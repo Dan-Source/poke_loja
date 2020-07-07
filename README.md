@@ -9,3 +9,7 @@ Uma Loja de Pokémon, o desafio do projeto é manter a consistência entre o pre
 - Adicione ao Chrome uma devtools para react
 - javascript + xml = JSX
 - Entendendo o conceito de Sample Component e Class Component
+- Lidando com dados com props
+- Submiting data de um formulário
+    - setState
+    - handleSubmit

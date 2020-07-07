@@ -21,6 +21,9 @@ const BodyTablePokemons = (props) => {
             <tr key = {index}>
                 <td>{rows.name}</td>
                 <td>{rows.preco}</td>
+                <td>
+                    <button onClick={() => props.removePokemons(index)}>Delete</button>
+                </td>
             </tr>
         )
     })
@@ -29,11 +32,14 @@ const BodyTablePokemons = (props) => {
 
 class TablePokemons extends Component{
     render () {
-        const {pokemonsData} = this.props
+        const {pokemonsData, removePokemons} = this.props
         return(
             <table>
                 <HeadTablePokemons />
-                <BodyTablePokemons pokemonsData = {pokemonsData}/>
+                <BodyTablePokemons 
+                    pokemonsData = {pokemonsData} 
+                    removePokemons={removePokemons}
+                />
             </table>
         )
     }

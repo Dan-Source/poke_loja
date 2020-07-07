@@ -1,28 +1,33 @@
 import React, { Component } from 'react'
 import TablePokemons from './TablePokemons'
+import Form from './Form'
 
 class App extends React.Component {
+    state = {
+        pokemons: []
+    }
+    removePokemons = (index) =>{
+        const {pokemons} = this.state
+
+        this.setState({
+            pokemons: pokemons.filter((pokemon, i) => {
+                return i !== index
+            })
+        })
+    }
+    
+    handleSubmit = (pokemon) => {
+        this.setState({pokemons: [... this.state.pokemons, pokemon]})
+    }
+
     render () {
-        const pokemons = [
-            {
-                name: 'Charmander',
-                preco: '$ 60.00',
-            },
-            {
-                name: 'Charmander',
-                preco: '$ 60.00',
-            },
-            {
-                name: 'Charmander',
-                preco: '$ 60.00',
-            }
-            
-          ]
         const heading = <h1 className="site-heading">Poke Loja</h1>
+        const {pokemons} = this.state
             return(
                 <div className="App">
                     {heading}
-                    <TablePokemons pokemonsData = {pokemons}/>
+                    <TablePokemons pokemonsData = {pokemons} removePokemons={ this.removePokemons }/>
+                    <Form handleSubmit={this.handleSubmit}/>
                 </div>
             )
     }
