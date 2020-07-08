@@ -1,11 +1,13 @@
 import React, { Component } from 'react'
 import TablePokemons from './TablePokemons'
 import Form from './Form'
+import PokeDex from './PokeDex'
 
 class App extends React.Component {
     state = {
         pokemons: []
     }
+
     removePokemons = (index) =>{
         const {pokemons} = this.state
 
@@ -17,7 +19,7 @@ class App extends React.Component {
     }
     
     handleSubmit = (pokemon) => {
-        this.setState({pokemons: [... this.state.pokemons, pokemon]})
+        this.setState({pokemons: [...this.state.pokemons, pokemon]})
     }
 
     render () {
@@ -28,7 +30,10 @@ class App extends React.Component {
                     {heading}
                     <TablePokemons pokemonsData = {pokemons} removePokemons={ this.removePokemons }/>
                     <Form handleSubmit={this.handleSubmit}/>
+                    <PokeDex handleSubmit={this.handleSubmit}/>
                 </div>
+
+
             )
     }
   }

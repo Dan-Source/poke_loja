@@ -13,3 +13,8 @@ Uma Loja de Pokémon, o desafio do projeto é manter a consistência entre o pre
 - Submiting data de um formulário
     - setState
     - handleSubmit
+- Use REST API para pegar os pokemons
+- Criar os Componentes:
+    - Card com nome e valor do pokemons
+    - Carrinho Para receber os pokemons
+    -

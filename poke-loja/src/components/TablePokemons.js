@@ -1,17 +1,21 @@
 import React, { Component } from "react"
+import {ReactComponent as Logo} from '../components/img/pokemon.svg'
 
 const HeadTablePokemons = () => {
     return(
-        <thead>
-            <tr>
-                <th>
-                    Nome
-                </th>
-                <th>
-                    Preço
-                </th>
-            </tr>
-        </thead>
+        <div>
+            <h3> Carrinho </h3>
+            <thead>
+                <tr>
+                    <th>
+                        Nome
+                    </th>
+                    <th>
+                        Preço
+                    </th>
+                </tr>
+            </thead>
+        </div>
     )
 }
 
