@@ -9,11 +9,14 @@ class PokeDex extends Component {
     this.state = {
       pokemons : [],
       pokemonDetails : [],
+      listShopCart: [],
       offset: 0,
       loadNumber: 24
     }
     this.handleMoreClick = this.handleMoreClick.bind(this); 
   }
+
+
 
   componentDidMount() {
     this.getMorePokemon();

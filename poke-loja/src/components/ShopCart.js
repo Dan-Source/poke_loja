@@ -1,10 +1,10 @@
 import React, { Component } from "react"
 import {ReactComponent as Logo} from '../components/img/pokemon.svg'
 
-const HeadTablePokemons = () => {
+const HeadCart = () => {
     return(
         <div>
-            <h3> Carrinho </h3>
+            <h3> Poke Cart </h3>
             <thead>
                 <tr>
                     <th>
@@ -19,7 +19,7 @@ const HeadTablePokemons = () => {
     )
 }
 
-const BodyTablePokemons = (props) => {
+const BodyCart = (props) => {
     const rows = props.pokemonsData.map((rows, index)=> {
         return(
             <tr key = {index}>
@@ -34,7 +34,7 @@ const BodyTablePokemons = (props) => {
     return <tbody>{rows}</tbody>
 }
 
-class TablePokemons extends Component{
+class ShopCart extends Component{
     render () {
         const {pokemonsData, removePokemons} = this.props
         return(
@@ -49,4 +49,4 @@ class TablePokemons extends Component{
     }
 }
 
-export default TablePokemons
+export default ShopCart
