@@ -4,7 +4,7 @@ import Header from './Header'
 
 const HeadCart = () => {
   return(
-      <div>
+    <>
           <thead>
               <tr>
                   <th scope="col" >
@@ -15,7 +15,7 @@ const HeadCart = () => {
                   </th>
               </tr>
           </thead>
-      </div>
+    </>
   )
 }
 
@@ -35,8 +35,8 @@ const BodyCart = (props) => {
   return (
       <tbody>
         {rows}
-        <td>TOTAL</td>
-        <td>$ {1000},00</td>
+        {/* <td>TOTAL</td>
+        <td>$ {1000},00</td> */}
       </tbody>
   )
   
